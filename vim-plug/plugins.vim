@@ -1,4 +1,4 @@
-call plug#begin('~/.config/nvim/autoload/plugged')
+call plug#begin('~/AppData/Local/nvim/autoload/plugged')
 
     Plug 'morhetz/gruvbox'
     Plug 'mhinz/vim-startify'
