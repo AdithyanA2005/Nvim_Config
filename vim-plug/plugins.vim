@@ -10,6 +10,7 @@ call plug#begin('~/AppData/Local/nvim/autoload/plugged')
     Plug 'tpope/vim-unimpaired'
     Plug 'liuchengxu/vim-which-key'
     Plug 'ryanoasis/vim-devicons'
+    Plug 'tpope/vim-commentary'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     
 call plug#end()
