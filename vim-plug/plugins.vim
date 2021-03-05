@@ -13,5 +13,6 @@ call plug#begin('~/AppData/Local/nvim/autoload/plugged')
     Plug 'tpope/vim-commentary'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'honza/vim-snippets'
+    Plug 'joshdick/onedark.vim'
     
 call plug#end()
