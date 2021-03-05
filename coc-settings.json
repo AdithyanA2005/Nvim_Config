@@ -1,0 +1,4 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": ["css",  "scss", "html"],
+  "snippets.userSnippetsDirectory": "~/AppData/Local/nvim/snips",
+}
