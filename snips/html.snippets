@@ -1,0 +1,43 @@
+
+snippet html5(data)? "Adi: Html Boiler Plate" br
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Loading Metadata -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">    
+
+	<!-- Loading Static -->
+	<script src="https://kit.fontawesome.com/d178991aaf.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">     
+
+	<!-- Loading Custom CSS-->
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	<!-- Tab Decoration -->
+	<link rel="icon" href="" type="image/png">
+	<title>${1:Title}</title>
+</head>
+<body>
+	<header>
+		<nav>
+			<h1 class="">${2:APP NAME}<h1/>
+			<a class="" href="#">${3:Nav_link}</a>
+			<a class="" href="#">${4:Nav_link}</a>
+			<a class="" href="#">${5:Nav_link}</a>
+			<a class="" href="#">${6:Nav_link}</a>
+		<nav/>
+	<header/>    
+
+	<section>
+		Body here
+	<section/>
+	
+	<footer>
+		<div class=""><div/>
+	<footer/>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
+endsnippet
