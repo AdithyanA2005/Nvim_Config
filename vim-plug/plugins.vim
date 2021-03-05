@@ -12,5 +12,6 @@ call plug#begin('~/AppData/Local/nvim/autoload/plugged')
     Plug 'ryanoasis/vim-devicons'
     Plug 'tpope/vim-commentary'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'honza/vim-snippets'
     
 call plug#end()
