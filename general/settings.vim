@@ -1,10 +1,15 @@
 syntax enable
 
-set number
 set noshowmode
 set expandtab
 set tabstop=4
 set shiftwidth=4
+
+" This will show us the line number
+set number
+
+" This will show us the up and down line numbers
+set relativenumber
 
 " Keys for changin indentation level
 set cinkeys-=:{
