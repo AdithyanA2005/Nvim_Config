@@ -21,7 +21,7 @@ let g:startify_custom_header = [
 " let g:startify_session_autoload = 1
 " let g:startify_session_delete_buffers = 1
 " let g:startify_session_dir = '~/OneDrive/Documents/Coding/'
-
+let g:startify_session_dir = '~/.config/nvim/session'
 let g:startify_change_to_vcs_root = 1
 let g:startify_enable_special = 0
 let g:webdevicons_enable_startify = 1

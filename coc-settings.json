@@ -1,4 +1,74 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["css",  "scss", "html"],
-  "snippets.userSnippetsDirectory": "~/AppData/Local/nvim/snips",
+    // some symbols you might like: פּ                  
+    "explorer.width": 30,
+    "explorer.file.root.template": "[icon] [git] [hidden & 1][root]",
+    "explorer.icon.enableNerdfont": true,
+    "explorer.previewAction.onHover": false,
+    "explorer.icon.enableVimDevicons": false,
+    "explorer.file.showHiddenFiles": false,
+    "explorer.keyMappings.global": {
+        "<cr>": [
+            "expandable?",
+            "expand",
+            "open"
+        ],
+        "v": "open:vsplit"
+    },
+    "python.linting.pylintEnabled": true,
+    "snippets.userSnippetsDirectory": "$HOME/.config/nvim/snips", // This is The directory where we store our custom snippets
+    "snippets.ultisnips.directories": [ // In These direcrtories we have our custom snippets
+        "UltiSnips",
+        "~/.config/nvim/snips"
+    ],
+    "coc.preferences.formatOnSaveFiletypes": [ // These files will be auto-formated when we save it 
+        "css",
+        "scss",
+        "html",
+        "json",
+        "javascript",
+        "markdown",
+        "python",
+        "java"
+    ],
+    "suggest.completionItemKindLabels": {
+        "method": "  ",
+        "function": "  ",
+        "variable": "[]",
+        "field": "  ",
+        "typeParameter": "<>",
+        "constant": "  ",
+        "class": "  ",
+        "interface": " 蘒",
+        "struct": "  ",
+        "event": "  ",
+        "operator": "  ",
+        "module": "  ",
+        "property": "  ",
+        "enum": " 練",
+        "reference": "  ",
+        "keyword": "  ",
+        "file": "  ",
+        "folder": " ﱮ",
+        "color": "  ",
+        "unit": " 塞 ",
+        "snippet": "  ",
+        "text": "  ",
+        "constructor": "  ",
+        "value": "  ",
+        "enumMember": "  ",
+        "default": "  "
+    },
+    "explorer.keyMappings.global": {
+        "<cr>": [
+            "expandable?",
+            "expand",
+            "open"
+        ],
+        "v": "open:vsplit"
+    },
+    // emmet
+    "emmet.includeLanguages": {
+        "vue-html": "html",
+        "javascript": "javascriptreact"
+    }
 }

@@ -1,5 +1,4 @@
-call plug#begin('~/AppData/Local/nvim/autoload/plugged')
-
+call plug#begin('$HOME/.config/nvim/autoload/plugged')
     Plug 'morhetz/gruvbox'
     Plug 'mhinz/vim-startify'
     Plug 'preservim/nerdtree'
@@ -14,5 +13,12 @@ call plug#begin('~/AppData/Local/nvim/autoload/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'honza/vim-snippets'
     Plug 'joshdick/onedark.vim'
-    
+    Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+    Plug 'junegunn/rainbow_parentheses.vim'
 call plug#end()
+
+" Automatically install missing plugins on startup
+autocmd VimEnter *
+  \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \|   PlugInstall --sync | q
+  \| endif
