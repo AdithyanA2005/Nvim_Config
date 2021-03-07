@@ -1,11 +1,15 @@
 call plug#begin('$HOME/.config/nvim/autoload/plugged')
+	Plug 'voldikss/vim-floaterm'
+    Plug 'airblade/vim-gitgutter'                                                   " This will show specific symbols based on git in the side of the screen
+    Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-rhubarb'
+    Plug 'junegunn/gv.vim'   
     Plug 'morhetz/gruvbox'
     Plug 'mhinz/vim-startify'
     Plug 'preservim/nerdtree'
     Plug 'vim-airline/vim-airline'
     Plug 'jiangmiao/auto-pairs'
     Plug 'octol/vim-cpp-enhanced-highlight'
-    Plug 'mhinz/vim-signify'
     Plug 'tpope/vim-unimpaired'
     Plug 'liuchengxu/vim-which-key'
     Plug 'ryanoasis/vim-devicons'
