@@ -38,5 +38,5 @@ set cinkeys-=:{[                        " The auto indentation will be activated
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
 " You can't stop me
-cmap w!! w !sudo tee %
+" cmap w!! w !sudo tee %
 

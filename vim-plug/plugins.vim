@@ -13,9 +13,11 @@ call plug#begin('$HOME/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-unimpaired'
     Plug 'liuchengxu/vim-which-key'
     Plug 'ryanoasis/vim-devicons'
-    Plug 'tpope/vim-commentary'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'honza/vim-snippets'
+    Plug 'tpope/vim-commentary'                                                     " This is to comment lines 
+    Plug 'dNitro/vim-pug-complete', { 'for': ['jade', 'pug'] }                      " This is for Pug autocompletion
+    Plug 'digitaltoad/vim-pug',                                                     " This is pug Syntax Hyliting
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}                                 " This is for coc
+    Plug 'honza/vim-snippets'                                                       " This is for Snippetes
     Plug 'joshdick/onedark.vim'
     Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
     Plug 'junegunn/rainbow_parentheses.vim'
