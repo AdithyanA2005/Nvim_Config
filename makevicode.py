@@ -5,11 +5,14 @@ def main():
     This is the main runnable function
     """
     distro = platform.system()
+    manage_loc(distro)
     
+
+def manage_loc(distro):
     loc_changer(distro, 'init.vim')
     loc_changer(distro, 'vim-plug/plugins.vim')
     loc_changer(distro, 'plug-config/start-screen.vim')
-    
+
 
 def loc_changer(distro, filename):
     f = open(filename, 'r')
