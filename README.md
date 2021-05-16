@@ -1,85 +1,152 @@
-# nvim config
+# ViCode
+> ViCode is a setup for nvim it transforms the classical nvim to a ide like thing 
+> It will have many features inbuilt and If you want You can also add Your Own new features
+>
+> ## Screenshots
+> ![nvim](https://user-images.githubusercontent.com/68990594/92236319-d1493480-eed2-11ea-9585-a224386fd5db.png)
+> 
 
-## Screen
+ # How To Use
+> 
+> ## Install Neovim
+> To use this first you need to have neovim installed If it is not installed install it.
+> 
+> ```
+> https://github.com/neovim/neovim/wiki/Installing-Neovim
+> ```
+>
 
-![nvim](https://user-images.githubusercontent.com/68990594/92236319-d1493480-eed2-11ea-9585-a224386fd5db.png)
+> ## Install Needed Dependencies
+> You also want to have some dependencies installed
+>   - NodeJS
+>   - Pynvim
+>       
+> Install Node JS
+> ```
+> https://nodejs.org/en/ 
+> ```
+>
+> Install Pynvim
+> ```bash
+> pip install pynvim
+> ```
+>
 
-## Screen Windows
+> ## Download The Setup
+> 
+> ### Windows
+> - NOTE: You also need to add nvim to system variable if you are on windows
+>
+> - You need to go inside the folder
+>
+>   ```bat
+>   cd C:\Users\YOUR-USER-NAME\AppData\Local
+>   ```
+>
+> - Clone the repository
+>   ```bash
+>   git clone https://gitlab.com/AdithyanA2005/nvim_setup.git nvim
+>   ```
+>
+> - Install Windows Configurations
+>   ```bat
+>   cd nvim
+>   ```
+>
+>   ```bat
+>   python windows.py
+>   ```
+>
+> ### Linux
+> - First you need to go inside the folder
+>
+>   ```bash
+>   cd ~/.config
+>   ```
+>
+> - Clone the repository
+>   ```bash
+>   git clone https://gitlab.com/AdithyanA2005/nvim_setup.git nvim
+>   ```
+> 
 
-![nvim-win](https://user-images.githubusercontent.com/68990594/96336615-b6a3d700-109e-11eb-930a-b8750ed7c2ac.png)
+> ## Install Plugins
+> - ### Open Neovim
+>   ```bash
+>   nvim
+>   ```
+>
+> - ### Install coc extensions 
+>   ```vimlsp
+>   :CocInstall coc-flutter coc-emmet coc-html coc-vimlsp coc-spell-checker coc-snippets coc-tabnine coc-clangd coc-json coc-java coc-cmake coc-python
+>   ```
+>   Click [here](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions) to see the full List of coc Extensio, If you want you can also download one off them
+>
 
-## Install Neovim
+> ## Custom Mapping
+> - ``` 
+>   gr (codefix) 
+>   ```
+>
+> - ```
+>   gd (go to definition)
+>   ```
+>
+> - ```
+>   gr (rename symbol)
+>   ```
+>
+> - ```
+>   gf (format current file)
+>   ```
+>
+> - ```
+>   K  (for documentation)
+>   ```
+>
+> - ```
+>   alt + hjkl to resize window.
+>   ```
+>
+> - ```
+>   ctrl + hjkl for window navigation.
+>   ```
+>  
+> - ```
+>   ctrl + n to redraw status bar.
+>   ```
+>  
+> - ```
+>   jk and kj for "ESC"
+>   ```
+>  
+> - ```
+>   space (leader key).
+>   ```
+>
 
-    https://github.com/neovim/neovim/wiki/Installing-Neovim
-
-## Install dependency package
-
-    pip install pynvim
-    nodejs
-
-## Install config
-
-    git clone https://github.com/sauravj7/nvim_config ~/.config/nvim
-
-    # For Windows
-    git clone https://github.com/sauravj7/nvim_config  C:\Users\[USER NAME]\AppData\Local\nvim
-
-## Edit Config (only for Windows)
-
-    ## File nvim/init.vim
-
-    change all ~/.config to ~/AppData/Local
-
-    # For ex
-    change 'source ~/.config/nvim/general/settings.vim'
-    to     'source ~/AppData/Local/nvim/general/settings.vim'
-
-
-    ## File nvim/vim-plug/plugins.vim
-
-    change 'call plug#begin('~/.config/nvim/autoload/plugged')'
-    to     'call plug#begin('~/AppData/Local/nvim/autoload/plugged')'
-
-## Install Plugins
-
-    # Open Neovim
-    nvim
-
-    # Install all of your plugins (restart neovim after this step)
-    :PlugInstall 
-
-    # Install coc extensions as you like 
-    :CocInstall coc-clangd coc-json coc-java coc-cmake coc-python
-
-[Full List of Extension](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions)
-
-## Custom Mapping
-
-    gr (codefix)
-    gd (go to definition)
-    gr (rename symbol)
-    gf (format current file)
-    K  (for documentation)
-
-    alt + hjkl to resize window.
-    ctrl + hjkl for window navigation.
-    
-    ctrl + n to redraw status bar.
-    
-    jk and kj for "ESC"
-    
-    space (leader key).
-
-## Plugins Included
-
-[Gruvbox](https://github.com/morhetz/gruvbox)  
-[Startify](https://github.com/mhinz/vim-startify)  
-[Nerdtree](https://github.com/preservim/nerdtree)  
-[Airline](https://github.com/vim-airline/vim-airline)  
-[Auto Pairs](https://github.com/jiangmiao/auto-pairs)  
-[Cpp Highlight](https://github.com/octol/vim-cpp-enhanced-highlight)  
-[Signify](https://github.com/mhinz/vim-signify)  
-[Unimpaired](https://github.com/tpope/vim-unimpaired)  
-[Which Key](https://github.com/liuchengxu/vim-which-key)  
-[Devicons](https://github.com/ryanoasis/vim-devicons)  
-[COC](https://github.com/neoclide/coc.nvim)  
+> ## Plugins Included
+>
+> - [Gruvbox](https://github.com/morhetz/gruvbox)  
+> - [Airline](https://github.com/vim-airline/vim-airline) 
+> - [Onedark](https://github.com/joshdick/onedark.vim)
+> - [Startify](https://github.com/mhinz/vim-startify)  
+> - [Signify](https://github.com/mhinz/vim-signify)  
+> - [Nerdtree](https://github.com/preservim/nerdtree)  
+> - [Auto Pairs](https://github.com/jiangmiao/auto-pairs)  
+> - [Rainbow_Parenthesis](https://github.com/junegunn/rainbow_parentheses.vim)
+> - [Cpp Highlight](https://github.com/octol/vim-cpp-enhanced-highlight) 
+> - [Gitgutter](https://github.com/airblade/vim-gitgutter')
+> - [Fugitive](https://github.com/tpope/vim-fugitive)
+> - [Rhubarb](https://github.com/tpope/vim-rhubarb)
+> - [GV](https://github.com/junegunn/gv.vim)
+> - [Unimpaired](https://github.com/tpope/vim-unimpaired)  
+> - [Which Key](https://github.com/liuchengxu/vim-which-key)  
+> - [Devicons](https://github.com/ryanoasis/vim-devicons)
+> - [COC](https://github.com/neoclide/coc.nvim)  
+> - [Floaterm](https://github.com/voldikss/vim-floaterm)
+> - [Commentary](https://github.com/tpope/vim-commentary)
+> - [Pug_Complete](https://github.com/dNitro/vim-pug-complete)
+> - [Pug](https://github.com/digitaltoad/vim-pug)
+> - [Snippets](https://github.com/honza/vim-snippets)
+> - [Rnvimr](https://github.com/kevinhwang91/rnvimr)
