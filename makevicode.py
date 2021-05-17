@@ -16,6 +16,7 @@ def main():
 def manage_loc(distro):
 	try:
 	    loc_changer(distro, 'init.vim')
+		loc_changer(distro, 'coc-settings.json')
 	    loc_changer(distro, 'vim-plug/plugins.vim')
 	    loc_changer(distro, 'plug-config/start-screen.vim')
 	    return True
