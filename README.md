@@ -3,8 +3,14 @@
 > It will have many features inbuilt and If you want You can also add Your Own new features
 >
 > ## Screenshots
-> ![nvim](https://user-images.githubusercontent.com/68990594/92236319-d1493480-eed2-11ea-9585-a224386fd5db.png)
-> 
+> - HomeScreen
+>
+>   ![nvim](github/Homescreen.png)
+>
+>
+> - CodeScreen
+>
+>   ![nvim] (github/Codescreen.png)
 
  # How To Use
 > 
@@ -34,41 +40,20 @@
 
 > ## Download The Setup
 > 
-> ### Windows
-> - NOTE: You also need to add nvim to system variable if you are on windows
->
-> - You need to go inside the folder
->
->   ```bat
->   cd C:\Users\YOUR-USER-NAME\AppData\Local
->   ```
->
 > - Clone the repository
 >   ```bash
->   git clone https://gitlab.com/AdithyanA2005/nvim_setup.git nvim
+>   git clone https://gitlab.com/AdithyanA2005/nvim_setup.git
 >   ```
 >
-> - Install Windows Configurations
+> - Install Configurations
 >   ```bat
->   cd nvim
+>   cd nvim_setup
 >   ```
 >
 >   ```bat
->   python windows.py
+>   python makevicode.py
 >   ```
 >
-> ### Linux
-> - First you need to go inside the folder
->
->   ```bash
->   cd ~/.config
->   ```
->
-> - Clone the repository
->   ```bash
->   git clone https://gitlab.com/AdithyanA2005/nvim_setup.git nvim
->   ```
-> 
 
 > ## Install Plugins
 > - ### Open Neovim
