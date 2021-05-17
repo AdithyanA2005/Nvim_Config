@@ -1,4 +1,5 @@
 # ViCode
+>
 > ViCode is a setup for nvim it transforms the classical nvim to a ide like thing 
 > It will have many features inbuilt and If you want You can also add Your Own new features
 >
@@ -10,7 +11,7 @@
 >
 > - CodeScreen
 >
->   ![nvim] (github/Codescreen.png)
+>   ![nvim](github/Codescreen.png)
 
  # How To Use
 > 
