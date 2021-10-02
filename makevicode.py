@@ -22,7 +22,7 @@ def manage_loc(distro):
 		return True
 
 	except Exception as e:
-		print(e)
+		print(f"An Error in makevicode.py/manage_loc => {e}")
 		return False
 
 
@@ -31,10 +31,10 @@ def loc_changer(distro, filename):
     old_text = f.read()
 
     if distro == "Windows":
-        new_text = old_text.replace('.config', 'AppData/Local')
+        new_text = old_text.replace('.config', 'AppData\\Local')
 
     elif distro == "Linux":
-        new_text = old_text.replace('AppData/Local', '.config')
+        new_text = old_text.replace('AppData\\Local', '.config')
 
     else:
         print("OS not recognised")
@@ -49,19 +49,19 @@ def package_loc(distro):
 
 	# This if else will provide the paths
 	if distro ==  "Windows":
-		config_dir = f"{pathlib.Path.home()}/AppData/Local/"
+		config_dir = f"{pathlib.Path.home()}\\AppData\\Local\\"
 
 	elif distro == "Linux":
 		config_dir = f"{pathlib.Path.home()}/.config/"
 
 	else:
-		print("Distro Not Supported")	
+		print("Hello This App is Only Supported for Linux and Windos Er")	
 
-	nvim_dir = f"{config_dir}/nvim"
+	nvim_dir = f"{config_dir}nvim"
 
 	# This if else will check whether nvim folder exist or not
 	if pathlib.Path(nvim_dir).is_dir():
-		os.rename(nvim_dir, f"{config_dir}/nvim.old" )
+		os.rename(nvim_dir, f"{config_dir}nvim.old" )
 		isold = True
 
 	else:
@@ -74,10 +74,12 @@ def package_loc(distro):
 
 
 def result(change, nvim):
+	print("DOING OPTIMISATION FOR YOUR OS")
 	if change:
 		print(" 	- All .vim files variables are optimised for your os")
+		# TODO: MAKE A TEMPORARY FILE TO SEE IF THE CODE iS RUNNED EARLIER
 	else:
-		print(" 	- The files variable changing was not successfully done for your os")
+		print(" 	- The files variable changing was not successfully done for your os. Ignore if you have alredy runned this program once")
 
 	if nvim:
 		print("	    - It is seen that you already have a existing counfiguration for nvim ")
