@@ -1,2 +1,3 @@
-autoload/plugged/*
-session
+nvim/autoload/plugged/*
+nvim/session
+.idea/
