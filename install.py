@@ -2,39 +2,45 @@ import time
 import platform
 from vicode.replace_path import replace_path
 from vicode.create_vicode import create_vicode
-from vicode.installation_result import result
+from vicode.installation_result import installation_result
 from vicode.complete_installation import complete_installation
 
 
 def main():
     """
-    This is the main runnable function
+    This is the main runnable function that will install the app
     """
     distro = platform.system()
     if distro == "Windows" or "Linux":
         try:
-            print("STARTING TO OPTIMISE THE APP FOR YOUR OS")
-            print("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n")
+            print("WELCOME TO VI CODE")
+            print("*-*-*-*-*-*-*-*-*-*")
+            print("\n")
             time.sleep(0.5)
 
+            print("PREPARING TO INSTALL THE APP")
             replace_path(distro)
-            print("-------------------------------------------------------\n\n")
+            print("    ➔ Path in vim files to other files are changed according to your OS")
+            print("\n")
             time.sleep(0.5)
 
             print("STARTING INSTALLATION")
-            print("*-*-*-*-*-*-*-*-*-*-*-*\n")
             config_dir_status, old_nvim_status = create_vicode(distro)
-            error = False
-            print("-------------------------------------------------------")
             time.sleep(0.5)
 
-        except Exception as e:
-            error = e
+            print("\n")
+            print("SUCCESSFUL INSTALLATION")
+            installation_result(distro, config_dir_status, old_nvim_status, 30)
 
-        result(distro, error, config_dir_status, old_nvim_status, 30)
-        print('\n')
-        time.sleep(0.4)
-        complete_installation()
+            print("\n")
+            print("    ➔ THANKS FOR CHOOSING VI-CODE")
+            complete_installation()
+
+        except Exception as e:
+            print('error:')
+            print(e)
+            print('\n')
+            print("UNSUCCESSFUL: Sorry, Due to some error the installation was broken or unsuccessful")
 
     else:
         print("SORRY YOU CANT INSTALL THE APP")

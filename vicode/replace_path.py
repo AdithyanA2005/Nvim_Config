@@ -1,5 +1,4 @@
 import os
-import time
 
 
 def change_path(distro, text):
@@ -8,7 +7,6 @@ def change_path(distro, text):
     """
     if distro == "Windows":
         text = text.replace('.config', 'AppData\\Local')
-
     elif distro == "Linux":
         text = text.replace('AppData\\Local', '.config')
 
@@ -22,13 +20,10 @@ def replace_path(distro):
     for root, dirs, files in os.walk("nvim", topdown=False):
         for name in files:
             filename = os.path.join(root, name)
-            print(f"Opening file '{filename}'")
             file = open(filename, 'r', encoding="utf-8")
-            print(f"File'{filename}' opened")
             text = file.read()
             file.close()
             text = change_path(distro, text)
             file = open(filename, 'w', encoding="utf-8")
             file.write(text)
-            print(f"Nvim file path changed successfully in {filename}")
             file.close()

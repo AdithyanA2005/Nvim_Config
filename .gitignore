@@ -1,3 +1,4 @@
 nvim/autoload/plugged/*
 nvim/session
 .idea/
+./vicode/__pycache__

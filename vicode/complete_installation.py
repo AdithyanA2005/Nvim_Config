@@ -2,11 +2,12 @@ import webbrowser
 
 
 def complete_installation():
-    print("INSTALLED SUCCESSFULLY DOESN'T MEAN THAT THIS IS NOW COMPLETELY USABLE")
-    print("THERE ARE FEW MORE STEPS TO DO TO GET THE COMPLETE OUT OF THIS APP")
-    print("TO KNOW ABOUT IT GO TO OUR WEBSITES AFTER INSTALL SECTION")
-    print("LIdNK: youtube.com\n")
-    input("PRESS ENTER TO OPEN WEBSITE OR PRESS Q TO EXIT: ").upper()
-    print("THANKS FOR CHOOSING VI-CODE")
-    print("OPENING...")
+    """
+    This function will print and show to open our website so that the user could know more about it
+    """
+    print("        ➔ Installed successfully doesn't mean that this is now completely usable")
+    print("        ➔ There are few more steps to do to get the complete out of this app")
+    print("        ➔ To know more about it go to out websites after installation section")
+    print("        ➔ LINK: youtube.com")
+    input("        ➔ PRESS ENTER TO QUIT AND OPEN WEBSITE: ").upper()
     webbrowser.open('youtube.com')
