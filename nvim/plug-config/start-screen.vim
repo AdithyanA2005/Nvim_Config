@@ -36,8 +36,8 @@ let g:startify_lists = [
 
 let g:startify_bookmarks = [
             \ { 'dw': '~/OneDrive/Documents/Coding/Web/0.Deepas_Dream_World' },
-            \ { 'al': '~/OneDrive/Documents/Coding/Python/Artificial_Intelligence/AI_ALPHA' },
-            \ { 'vi': '~/AppData/Local/nvim/init.vim' },
+          let g:startify_bookmarks = [
+            \ { 'ss': '~/AppData/Local/nvim/plug-config/start-screen.vim' },
             \ ]
 function! StartifyEntryFormat()
         return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
