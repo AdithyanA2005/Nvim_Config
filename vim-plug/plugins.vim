@@ -1,4 +1,4 @@
-call plug#begin('$HOME/AppData\Local/nvim/autoload/plugged')
+call plug#begin('$HOME/AppData/Local/nvim/autoload/plugged')
 	Plug 'voldikss/vim-floaterm'
     Plug 'airblade/vim-gitgutter'                                                   " This will show specific symbols based on git in the side of the screen
     Plug 'tpope/vim-fugitive'

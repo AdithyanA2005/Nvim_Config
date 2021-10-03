@@ -21,7 +21,7 @@ let g:startify_custom_header = [
 " let g:startify_session_autoload = 1
 " let g:startify_session_delete_buffers = 1
 " let g:startify_session_dir = '~/OneDrive/Documents/Coding/'
-let g:startify_session_dir = '~/AppData\Local/nvim/session'
+let g:startify_session_dir = '~/AppData/Local/nvim/session'
 let g:startify_change_to_vcs_root = 1
 let g:startify_enable_special = 0
 let g:webdevicons_enable_startify = 1
@@ -35,7 +35,9 @@ let g:startify_lists = [
           \ ]
 
 let g:startify_bookmarks = [
-            \ { 'ss': '~/AppData/Local/nvim/plug-config/start-screen.vim' },
+            \ { 'dw': '~/OneDrive/Documents/Coding/Web/0.Deepas_Dream_World' },
+            \ { 'al': '~/OneDrive/Documents/Coding/Python/Artificial_Intelligence/AI_ALPHA' },
+            \ { 'vi': '~/AppData/Local/nvim/init.vim' },
             \ ]
 function! StartifyEntryFormat()
         return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'

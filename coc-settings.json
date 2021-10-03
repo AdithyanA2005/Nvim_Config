@@ -15,10 +15,10 @@
         "v": "open:vsplit"
     },
     "python.linting.pylintEnabled": true,
-    "snippets.userSnippetsDirectory": "$HOME/AppData\Local/nvim/snips", // This is The directory where we store our custom snippets
+    "snippets.userSnippetsDirectory": "$HOME/.config/nvim/snips", // This is The directory where we store our custom snippets
     "snippets.ultisnips.directories": [ // In These direcrtories we have our custom snippets
         "UltiSnips",
-        "~/AppData\Local/nvim/snips"
+        "~/.config/nvim/snips"
     ],
     "coc.preferences.formatOnSaveFiletypes": [ // These files will be auto-formated when we save it 
         "css",
