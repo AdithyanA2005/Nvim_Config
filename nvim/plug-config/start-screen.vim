@@ -35,8 +35,6 @@ let g:startify_lists = [
           \ ]
 
 let g:startify_bookmarks = [
-            \ { 'dw': '~/OneDrive/Documents/Coding/Web/0.Deepas_Dream_World' },
-          let g:startify_bookmarks = [
             \ { 'ss': '~/AppData/Local/nvim/plug-config/start-screen.vim' },
             \ ]
 function! StartifyEntryFormat()
