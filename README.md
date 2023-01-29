@@ -1,152 +1,88 @@
-# ViCode
-> ViCode is a setup for nvim it transforms the classical nvim to a ide like thing 
-> It will have many features inbuilt and If you want You can also add Your Own new features
->
-> ## Screenshots
-> ![nvim](https://user-images.githubusercontent.com/68990594/92236319-d1493480-eed2-11ea-9585-a224386fd5db.png)
-> 
+# Neovim from scratch
 
- # How To Use
-> 
-> ## Install Neovim
-> To use this first you need to have neovim installed If it is not installed install it.
-> 
-> ```
-> https://github.com/neovim/neovim/wiki/Installing-Neovim
-> ```
->
+**Update** When I initially created this repo I didn't anticipate the amount of breaking changes introduced by the rapidly developing plugin ecosystem. If you'd like to use the same basic config as this one as a base I can also recommend my newer repo: [nvim-basic-ide](https://github.com/LunarVim/nvim-basic-ide)
 
-> ## Install Needed Dependencies
-> You also want to have some dependencies installed
->   - NodeJS
->   - Pynvim
->       
-> Install Node JS
-> ```
-> https://nodejs.org/en/ 
-> ```
->
-> Install Pynvim
-> ```bash
-> pip install pynvim
-> ```
->
+**Another Update**  All packages are pinned in `master` so it will remain stable. Branches will be updated eventually (currently broken from branch #7 onwards. Hint: Good opportunity for pull requests!).
 
-> ## Download The Setup
-> 
-> ### Windows
-> - NOTE: You also need to add nvim to system variable if you are on windows
->
-> - You need to go inside the folder
->
->   ```bat
->   cd C:\Users\YOUR-USER-NAME\AppData\Local
->   ```
->
-> - Clone the repository
->   ```bash
->   git clone https://gitlab.com/AdithyanA2005/nvim_setup.git nvim
->   ```
->
-> - Install Windows Configurations
->   ```bat
->   cd nvim
->   ```
->
->   ```bat
->   python windows.py
->   ```
->
-> ### Linux
-> - First you need to go inside the folder
->
->   ```bash
->   cd ~/.config
->   ```
->
-> - Clone the repository
->   ```bash
->   git clone https://gitlab.com/AdithyanA2005/nvim_setup.git nvim
->   ```
-> 
+This repository and accompanying tutorials outline the building blocks of modern Neovim for your personalized development environment. Each video is associated with a branch so checkout the one you are interested in, you can follow along with this [playlist](https://www.youtube.com/watch?v=ctH-a-1eUME&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ). 
 
-> ## Install Plugins
-> - ### Open Neovim
->   ```bash
->   nvim
->   ```
->
-> - ### Install coc extensions 
->   ```vimlsp
->   :CocInstall coc-flutter coc-emmet coc-html coc-vimlsp coc-spell-checker coc-snippets coc-tabnine coc-clangd coc-json coc-java coc-cmake coc-python
->   ```
->   Click [here](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions) to see the full List of coc Extensio, If you want you can also download one off them
->
+General Neovim support is available on our [Matrix chat](https://matrix.to/#/#neovim-atmachine:matrix.org).
 
-> ## Custom Mapping
-> - ``` 
->   gr (codefix) 
->   ```
->
-> - ```
->   gd (go to definition)
->   ```
->
-> - ```
->   gr (rename symbol)
->   ```
->
-> - ```
->   gf (format current file)
->   ```
->
-> - ```
->   K  (for documentation)
->   ```
->
-> - ```
->   alt + hjkl to resize window.
->   ```
->
-> - ```
->   ctrl + hjkl for window navigation.
->   ```
->  
-> - ```
->   ctrl + n to redraw status bar.
->   ```
->  
-> - ```
->   jk and kj for "ESC"
->   ```
->  
-> - ```
->   space (leader key).
->   ```
->
+## Try out this config
 
-> ## Plugins Included
->
-> - [Gruvbox](https://github.com/morhetz/gruvbox)  
-> - [Airline](https://github.com/vim-airline/vim-airline) 
-> - [Onedark](https://github.com/joshdick/onedark.vim)
-> - [Startify](https://github.com/mhinz/vim-startify)  
-> - [Signify](https://github.com/mhinz/vim-signify)  
-> - [Nerdtree](https://github.com/preservim/nerdtree)  
-> - [Auto Pairs](https://github.com/jiangmiao/auto-pairs)  
-> - [Rainbow_Parenthesis](https://github.com/junegunn/rainbow_parentheses.vim)
-> - [Cpp Highlight](https://github.com/octol/vim-cpp-enhanced-highlight) 
-> - [Gitgutter](https://github.com/airblade/vim-gitgutter')
-> - [Fugitive](https://github.com/tpope/vim-fugitive)
-> - [Rhubarb](https://github.com/tpope/vim-rhubarb)
-> - [GV](https://github.com/junegunn/gv.vim)
-> - [Unimpaired](https://github.com/tpope/vim-unimpaired)  
-> - [Which Key](https://github.com/liuchengxu/vim-which-key)  
-> - [Devicons](https://github.com/ryanoasis/vim-devicons)
-> - [COC](https://github.com/neoclide/coc.nvim)  
-> - [Floaterm](https://github.com/voldikss/vim-floaterm)
-> - [Commentary](https://github.com/tpope/vim-commentary)
-> - [Pug_Complete](https://github.com/dNitro/vim-pug-complete)
-> - [Pug](https://github.com/digitaltoad/vim-pug)
-> - [Snippets](https://github.com/honza/vim-snippets)
-> - [Rnvimr](https://github.com/kevinhwang91/rnvimr)
+This config requires [Neovim v0.8.0](https://github.com/neovim/neovim/releases). Please [upgrade](#upgrade-to-neovim-v080) if you're on an earlier version of the editor.
+
+Clone the repository into the correct location (make a backup your current `nvim` directory if you want to keep it).
+
+```
+git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/.config/nvim
+```
+
+Run `nvim` in your terminal and wait for the plugins to be installed. You will notice treesitter pulling in a bunch of language parsers the next time you open Neovim.
+
+**NOTE** [Mason](https://github.com/williamboman/mason.nvim) is used to install and manage LSP servers, DAP servers, linters, and formatters via the `:Mason` command.
+
+## Get healthy
+
+Open `nvim` and enter the following:
+
+```
+:checkhealth
+```
+
+You'll probably notice you don't have support for copy/paste also that python and node haven't been setup
+
+So let's fix that
+
+First we'll fix copy/paste
+
+- On mac `pbcopy` should be builtin
+
+- On Ubuntu
+
+  ```
+  sudo apt install xsel
+  ```
+
+- On Arch Linux
+
+  ```
+  sudo pacman -S xsel
+  ```
+  
+- Wayland users
+
+  [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
+
+
+Next we need to install python support (node is optional)
+
+- Neovim python support
+
+  ```
+  pip install pynvim
+  ```
+
+- Neovim node support
+
+  ```
+  npm i -g neovim
+  ```
+---
+
+**NOTE** make sure you have [node](https://nodejs.org/en/) installed, I recommend a node manager like [fnm](https://github.com/Schniz/fnm).
+
+### Upgrade to Neovim v0.8.0
+
+Assuming you [built from source](https://github.com/neovim/neovim/wiki/Building-Neovim#quick-start), `cd` into the folder where you cloned `neovim` and run the following commands. 
+```
+git pull
+make distclean && make CMAKE_BUILD_TYPE=Release
+git checkout v0.8.0
+sudo make install
+nvim -v
+```
+
+> The computing scientist's main challenge is not to get confused by the complexities of his own making. 
+
+\- Edsger W. Dijkstra
